@@ -48,6 +48,15 @@ class Vector{
         }
         return arr[index];
     }
+    void remove()
+    {
+        if(size==0)
+        {
+            cout<<"Vector is empty"<<endl;
+            return;
+        }
+        size--;
+    }
 };
 int main()
 {
@@ -70,4 +79,7 @@ int main()
     cout<<"Element at index 0: "<<v.get(0)<<endl;//10
     cout<<"Element at index 2: "<<v.get(2)<<endl;//7
     cout<<"Element at invalid index: "<<v.get(5)<<endl;//-1
+    v.remove();
+    v.print();
+    cout<<"Size: "<<v.size<<" Capacity: "<<v.capacity<<endl;//2 4   
 }
